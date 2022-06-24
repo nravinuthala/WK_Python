@@ -1,0 +1,16 @@
+inputstr = input('Enter a string:')
+inputstr = inputstr.casefold()
+print(inputstr)
+vowels = 'aeiou'
+
+# count total number of vowels
+num_vowels = [vowel for vowel in inputstr if vowel in vowels]
+print((len(num_vowels), num_vowels))
+
+# count number of times each vowel occurs
+vowel_count = {}.fromkeys(vowels, 0)
+for char in inputstr:
+    if char in vowels:
+        vowel_count[char] += 1
+
+print(vowel_count)
