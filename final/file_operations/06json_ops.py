@@ -1,7 +1,7 @@
 import json
 
 def load_data() -> dict:
-    with open('resources\patient_data.json', 'r') as patient_data_file:
+    with open('../resources/patient_data.json', 'r') as patient_data_file:
         pdata = json.load(patient_data_file)
         # print(pdata)
         return pdata
@@ -13,7 +13,7 @@ def update_data(id, name, pdata):
             patient["firstName"] = name
 
 def save_data(pdata):
-    with open('resources\patient_data.json', 'w') as patient_data_file:
+    with open('../resources/patient_data.json', 'w') as patient_data_file:
         json.dump(pdata, patient_data_file, indent=4)
 
 patient_data = load_data()

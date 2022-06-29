@@ -4,7 +4,7 @@ csv_cols = ["patient_id","firstName","lastName","gender","age","address__streetA
 def load_data():
     pdata = {}
     pdata["patients_list"] = []
-    with open('resources\patient_data.csv') as csv_file:
+    with open('../resources/patient_data.csv') as csv_file:
         csv_file = csv.DictReader(csv_file)
         for row in csv_file:
             # print(row)
@@ -18,7 +18,7 @@ def update_data(id, name, pdata):
             patient["firstName"] = name
 
 def save_data(pdata, cols):
-    with open("resources\patient_data_new.csv", 'w') as csvfile:
+    with open("../resources/patient_data_new.csv", 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=cols)
         writer.writeheader()
         for data in pdata["patients_list"]:

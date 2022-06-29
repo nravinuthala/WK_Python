@@ -73,7 +73,7 @@ def delete_patient():
 	pass
 
 def load_data():
-	with open("resources\patient_data.json", 'r') as json_file_handle:
+	with open("../resources/patient_data.json", 'r') as json_file_handle:
 		json_data = json.load(json_file_handle)
 	return json_data
 
@@ -83,7 +83,7 @@ def update_data(id, name, pdata):
 			patient["firstName"] = name
 
 def save_data(pdata):
-	with open("resources\patient_data_new.json", 'w') as json_file_handle:
+	with open("../resources/patient_data_new.json", 'w') as json_file_handle:
 		json.dump(pdata, json_file_handle, indent=8)
 
 show_main_menu()
