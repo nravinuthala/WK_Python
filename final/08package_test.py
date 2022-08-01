@@ -1,4 +1,4 @@
-from mypackage.subpackage.subsubpackage import mymodule as mm
+from mypackage.subpackage.subsubpackage.mymodule import show_menu
 
-mm.show_menu()
+show_menu()
 

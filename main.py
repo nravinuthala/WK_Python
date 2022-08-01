@@ -3,9 +3,12 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+global_var = 10
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
+    global global_var
+    global_var = 20
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 

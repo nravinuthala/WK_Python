@@ -1,0 +1,16 @@
+Objects
+Patient, Doctor
+
+
+patients = {
+    p1: {
+
+    },
+    p2: {
+
+    }
+
+
+}
+
+patients.p2["status"] = "inactive"

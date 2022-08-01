@@ -7,11 +7,17 @@ def get_yob(dobs):
         yobs.append(int(dob.split('-')[2]))
     return yobs
 
+# print()
+yobs = get_yob(patient_dobs)
+
 def get_ages(yobs):
     ages = []
     for yr in yobs:
         ages.append(curr_yr - yr)
     return ages
+
+# s_ages = get_ages(yobs)
+# print(s_ages)
 
 def get_patient_status(get_yob, get_ages, dobs):
     is_major = []
@@ -23,3 +29,4 @@ def get_patient_status(get_yob, get_ages, dobs):
     return is_major
 
 print(get_patient_status(get_yob, get_ages, patient_dobs))
+
